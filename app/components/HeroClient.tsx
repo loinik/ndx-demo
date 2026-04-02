@@ -532,7 +532,7 @@ export default function Hero({ initialGame, initialError }: Props) {
         {/* ── HERO ── */}
         <section id="hero" style={{ position: 'relative', width: 'calc(100vw - 16px)', aspectRatio: 2 / 1, margin: 8, borderRadius: 40, boxSizing: 'border-box', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', zIndex: 10, padding: 20, gap: 20 }}>
-            <Image src="/key-logo.png" alt="Key Logo" width={768} height={300} />
+            <Image src={`${basePath}/key-logo.png`} alt="Key Logo" width={768} height={300} />
             <div className="buttons" style={{ display: 'flex', flexDirection: 'row', gap: 24, zIndex: 2 }}>
               <a
                 href="#buy"

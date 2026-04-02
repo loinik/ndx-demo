@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "npx serve@latest out",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "NEXT_BASE_PATH=/ndx-demo npm run build && npx gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@specy/liquid-glass-react": "^1.0.2",
@@ -23,6 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.2",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
