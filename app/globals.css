@@ -24,3 +24,141 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer components {
+  .api-html {
+    color: rgb(64 64 64);
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .api-html>*+* {
+    margin-top: 1rem;
+  }
+
+  .api-html h4 {
+    margin-top: 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: rgb(10 10 10);
+  }
+
+  .api-html p {
+    margin: 0;
+  }
+
+  .api-html ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .api-html li+li {
+    margin-top: 0.5rem;
+  }
+
+  .api-html strong,
+  .api-html b {
+    font-weight: 600;
+    color: rgb(10 10 10);
+  }
+
+  /* ── Features list — custom dots, no default bullets ── */
+  .api-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .api-features ul+ul {
+    margin-top: 12px;
+  }
+
+  .api-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #333;
+  }
+
+  .api-features li::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    min-width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #999;
+    margin-top: 0.58em;
+    flex-shrink: 0;
+  }
+
+  /* ── System Requirements — h4 category headers + dash list ── */
+  .api-reqs {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .api-reqs h4 {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #888;
+    margin: 20px 0 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  }
+
+  .api-reqs h4:first-child {
+    margin-top: 0;
+  }
+
+  .api-reqs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .api-reqs li {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  .api-reqs li::before {
+    content: '\2013';
+    color: #c8c8c8;
+    flex-shrink: 0;
+    line-height: 1.5;
+  }
+
+  /* ── Fix sup/® flying too high ── */
+  .api-reqs sup {
+    font-size: 0.65em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    top: -0.38em;
+  }
+
+  /* ── Story prose paragraph spacing ── */
+  .story-prose p+p {
+    margin-top: 1em;
+  }
+
+  .story-prose p {
+    margin: 0;
+  }
+}
